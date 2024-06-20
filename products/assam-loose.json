@@ -1,0 +1,13 @@
+{
+    "name":"Tea India CTC Assam Loose Leaf Black Tea",
+    "statistics":{
+        "strength":"2",
+        "caffeine":"1",
+        "room-note":"1",
+        "moisture":"1",
+        "shelf-life":"4"
+        },
+    "description":"Product description for assam-loose",
+    "country":"India",
+    "price":"3.99"
+    }

@@ -1,0 +1,13 @@
+{
+    "name":"Vahdam India's Original Masala Chai",
+    "statistics":{
+        "strength":"3",
+        "caffeine":"1",
+        "room-note":"3",
+        "moisture":"3",
+        "shelf-life":"2"
+        },
+    "description":"Product description for vahdam-masala",
+    "country":"India",
+    "price":"11.99"
+    }

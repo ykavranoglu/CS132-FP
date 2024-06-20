@@ -1,0 +1,13 @@
+{
+    "name":"Wagh Bakri Premium Tea",
+    "statistics":{
+        "strength":"4",
+        "caffeine":"1",
+        "room-note":"4",
+        "moisture":"1",
+        "shelf-life":"4"
+        },
+    "description":"Product description for wagh-bakri",
+    "country":"India",
+    "price":"9.99"
+    }

@@ -1,0 +1,13 @@
+{
+    "name":"Grand Tea and Imports Jasmine Green Tea",
+    "statistics":{
+        "strength":"1",
+        "caffeine":"2",
+        "room-note":"5",
+        "moisture":"2",
+        "shelf-life":"1"
+        },
+    "description":"Product description for grand-tea-imports-jasmine-green",
+    "country":"China",
+    "price":"17.45"
+    }

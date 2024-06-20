@@ -1,0 +1,13 @@
+{
+    "name":"Tian Hu Shan Premium Oolong Tea Loose Leaf",
+    "statistics":{
+        "strength":"4",
+        "caffeine":"3",
+        "room-note":"3",
+        "moisture":"2",
+        "shelf-life":"3"
+        },
+    "description":"Product description for tian-hu-shan-oolong",
+    "country":"China",
+    "price":"14.99"
+    }

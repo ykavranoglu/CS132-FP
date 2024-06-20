@@ -1,0 +1,13 @@
+{
+    "name":"Tenfu Youqing Jasmine Tea",
+    "statistics":{
+        "strength":"1",
+        "caffeine":"2",
+        "room-note":"4",
+        "moisture":"2",
+        "shelf-life":"1"
+        },
+    "description":"Product description for tenfu-youqing-jasmine",
+    "country":"China",
+    "price":"12.45"
+    }

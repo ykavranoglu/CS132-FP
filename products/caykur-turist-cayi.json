@@ -1,0 +1,13 @@
+{
+    "name":"Caykur Tourist Tea",
+    "statistics":{
+        "strength":"4",
+        "caffeine":"5",
+        "room-note":"2",
+        "moisture":"2",
+        "shelf-life":"2"
+        },
+    "description":"Product description for caykur-turist-cayi",
+    "country":"Turkey",
+    "price":"12.30"
+    }

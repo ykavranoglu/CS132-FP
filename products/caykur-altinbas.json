@@ -1,0 +1,13 @@
+{
+    "name":"Caykur Loose Leaf Altinbas",
+    "statistics":{
+        "strength":"2",
+        "caffeine":"2",
+        "room-note":"4",
+        "moisture":"1",
+        "shelf-life":"4"
+        },
+    "description":"Product description for caykur-altinbas",
+    "country":"Turkey",
+    "price":"9.99"
+    }

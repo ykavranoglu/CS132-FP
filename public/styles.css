@@ -1,0 +1,203 @@
+/*
+ * Author: A. Yusuf Kavranoglu
+ * CS 132 Spring 2024
+ * Final project proposal files
+ *
+ * TODO: Remove provided comments before submitting.
+ */
+
+body, main, #cart, #product-list, #product-info, #add-to-cart, #left-col, .cart-item,
+#contact-view section {
+    display: flex;
+}
+
+#left-col, #product-info, #add-to-cart, #contact-view section {
+    flex-direction: column;
+}
+
+body, main, #map {
+    height: 100%;
+}
+
+#map {
+    width: 100%;
+}
+
+body, main {
+    flex-grow: 1;
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    font-family: montserrat, sans-serif;
+}
+
+#map-container {
+    flex-grow: 2.5;
+}
+
+#left-col {
+    flex-grow: 1;
+    background-color: #c9e4ca;
+    overflow-y: auto;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+#mapcontainer, #left-col {
+    flex-basis: 300px;
+}
+
+#left-col, #country-list > section, #left-col > section > section, #cart, #mock-image,
+#product-list article, #product-info img, #add-to-cart {
+    border: 2px solid black;
+}
+
+@media (max-width: 800px) {
+    #map-container {
+        display: none;  /* This will hide the section */
+    }
+}
+
+#country-list > section, #cart {
+    background-color: #7dab7f;
+}
+
+#country-list > section {
+    height: 40px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin: 0px;
+    margin-top: 5px;
+}
+
+#country-list > section, #left-col > section > section, #cart, #product-list article, 
+#product-info img, #add-to-cart {
+    border-radius: 10px;
+}
+
+#left-col > section > section, #cart {
+    margin: 20px;
+    padding: 10px;
+}
+
+#cart {
+    padding: 5px;
+    align-items: center;
+}
+
+#cart p {
+    font-size: 17pt;
+    margin-left: 45px;
+}
+
+#cart img {
+    max-width: 70px;
+    max-height: 70px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    font-size: 20pt;
+}
+
+h2 {
+    margin: 0;
+    font-size: 15pt;
+}
+
+#mock-image {
+    width: 200px;
+    height: 150px;
+    margin: auto;
+}
+
+a {
+    text-decoration: none;
+    font-size: 18pt;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    text-align: center;
+}
+
+#product-list article {
+    width: 180px;
+}
+
+#product-list {
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#product-list article {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #9cb49d;
+}
+
+#country-info {
+    text-align: center;
+}
+
+#product-info, #add-to-cart {
+    align-items: center;
+}
+
+#product-info img {
+    margin: 10px;
+}
+
+#go-back, #contact-us, #submit {
+    width: 100px;
+    height: 30px;
+    text-align: center;
+}
+
+#left-col {
+    align-items: center;
+}
+
+.cart-item input {
+    width: 40px;
+    height: 30px;
+}
+
+.cart-item p {
+    margin-right: 50px;
+}
+
+.cart-item {
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#contact-view input, #contact-view textarea {
+    width: 80%;
+    margin: 15px;
+}
+
+#contact-view textarea {
+    height: 200px;
+}
+
+#contact-view > section {
+    align-items: center;
+    text-align: center;
+}
+
+footer a {
+    font-size: 12pt;
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<!--
+    Author: A. Yusuf Kavranoglu
+    CS 132 Spring 2024
+    Final project proposal files
+
+    
+-->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tea Hunter</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <script src="https://cdn.maptiler.com/maplibre-gl-js/v1.14.0/maplibre-gl.js"></script>
+    <link href="https://cdn.maptiler.com/maplibre-gl-js/v1.14.0/maplibre-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- Provided helper files for DOM aliases and menu options -->
+    <script src="utils.js"></script>
+    <script defer src="scripts.js"></script>
+</head>
+<body>
+    <header></header>
+    <main>
+        <section id="left-col">
+            <h1>
+                Tea Hunter
+            </h1>
+
+            <p id="message-area" class="hidden"></p>
+
+            <button id="go-back" class="hidden">Go back</button>
+            
+            <section id="main-view">
+                <section id="country-list"></section>
+
+                <section id="introduction">
+                    <h2>
+                        Welcome!
+                    </h2>
+                    <p>
+                        Welcome to Tea Hunter! Here you can list websites based on their country
+                        of origin and see their places on the world map, or you can browse the world
+                        map to choose a country to explore its teas.
+                    </p>
+
+                    <p>
+                        Try it by clicking on a country from the list above, or from the world map.
+                        Add items to cart, and after you are done collecting different kinds of tea,
+                        see how many tea products from how many countries you have gathered in your
+                        cart.
+                    </p>
+                </section>
+
+            </section>
+
+            <section id="country-view" class="hidden">
+                <section id="country-info"></section>
+                <section>
+                    <h2>Products</h2>
+                    <section id="product-list"></section>
+                </section>
+            </section>
+
+            <section id="product-view" class="hidden">
+                <section id="product-info"></section>
+            </section>
+
+            <section id="cart-view" class="hidden">
+                <h2>Items in cart</h2>
+                <section id="cart-list"></section>
+            </section>
+
+            <section id="contact-view" class="hidden">
+                <section>
+                    <h2>Contact us!</h2>
+
+                    <p>
+                        Please write below your problem / inquiry / question / feedback. We would
+                        be glad to hear from you.
+                    </p>
+
+                    <label for="text">Enter your name:</label>
+                    <input id="name-area" type="text">
+                    <label for="email">Enter your email:</label>
+                    <input id="email-area" type="email">
+                    <label for="message">Enter your message:</label>
+                    <textarea id="message-content-area" name="message"></textarea>
+                    <button id="submit">Submit</button>
+                </section>
+                
+            </section>
+
+            <section id="cart">
+                <img src="images/cart.png" alt="Cart icon">
+                <p>
+                    5 items from 3 countries!
+                </p>
+            </section>
+
+            <button id="contact-us">Contact us!</button>
+
+            <footer>
+                <p>Made by A. Yusuf Kavranoglu</p>
+                <a href="https://www.flaticon.com/free-icons/tea" title="tea icons">Tea icons created by Octopocto - Flaticon</a>
+            </footer>
+
+        </section>
+
+        <section id="map-container">
+            <div id="map"></div>
+        </section>
+        
+
+    </main>
+
+    
+
+</body>
+</html>

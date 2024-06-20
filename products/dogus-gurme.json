@@ -1,0 +1,13 @@
+{
+    "name":"Dogus Gurme Tea",
+    "statistics":{
+        "strength":"2",
+        "caffeine":"2",
+        "room-note":"1",
+        "moisture":"4",
+        "shelf-life":"1"
+        },
+    "description":"Product description for dogus-gurme",
+    "country":"Turkey",
+    "price":"7.45"
+    }
