@@ -1,13 +1,17 @@
 /*
  * Author: A. Yusuf Kavranoglu
  * CS 132 Spring 2024
- * Final project proposal files
+ * Final project
  *
- * TODO: Remove provided comments before submitting.
+ * Project name: Tea Hunter
+ * Project description: This is an e-commerce website that allows the user to shop for different
+ * kinds of tea based on their country of origin, with a map integration.
+ * 
+ * File description: main and only css file of my project.
  */
 
 body, main, #cart, #product-list, #product-info, #add-to-cart, #left-col, .cart-item,
-#contact-view section {
+#contact-view section, #country-list > section {
     display: flex;
 }
 
@@ -15,7 +19,7 @@ body, main, #cart, #product-list, #product-info, #add-to-cart, #left-col, .cart-
     flex-direction: column;
 }
 
-body, main, #map {
+body, main, #map, #left-col {
     height: 100%;
 }
 
@@ -24,9 +28,15 @@ body, main, #map {
 }
 
 body, main {
-    flex-grow: 1;
     height: 100vh;
+}
+
+body, main, h2 {
     margin: 0;
+}
+
+body, main, #left-col {
+    flex-grow: 1;
 }
 
 body {
@@ -38,10 +48,8 @@ body {
 }
 
 #left-col {
-    flex-grow: 1;
     background-color: #c9e4ca;
     overflow-y: auto;
-    height: 100%;
     box-sizing: border-box;
 }
 
@@ -67,7 +75,6 @@ body {
 #country-list > section {
     height: 40px;
     margin-left: 50px;
-    margin-right: 50px;
     margin: 0px;
     margin-top: 5px;
 }
@@ -84,7 +91,6 @@ body {
 
 #cart {
     padding: 5px;
-    align-items: center;
 }
 
 #cart p {
@@ -97,7 +103,8 @@ body {
     max-height: 70px;
 }
 
-h1, h2 {
+h1, h2, a, footer, #product-list article, #contact-view > section, .cart-item, #go-back,
+#contact-us, #submit, #country-info {
     text-align: center;
 }
 
@@ -107,7 +114,6 @@ h1 {
 }
 
 h2 {
-    margin: 0;
     font-size: 15pt;
 }
 
@@ -120,15 +126,10 @@ h2 {
 a {
     text-decoration: none;
     font-size: 18pt;
-    text-align: center;
 }
 
 .hidden {
     display: none;
-}
-
-footer {
-    text-align: center;
 }
 
 #product-list article {
@@ -143,16 +144,7 @@ footer {
 #product-list article {
     margin: 10px;
     padding: 10px;
-    text-align: center;
     background-color: #9cb49d;
-}
-
-#country-info {
-    text-align: center;
-}
-
-#product-info, #add-to-cart {
-    align-items: center;
 }
 
 #product-info img {
@@ -162,10 +154,9 @@ footer {
 #go-back, #contact-us, #submit {
     width: 100px;
     height: 30px;
-    text-align: center;
 }
 
-#left-col {
+#left-col, .cart-item, #contact-view > section, #cart, #product-info, #add-to-cart {
     align-items: center;
 }
 
@@ -179,8 +170,6 @@ footer {
 }
 
 .cart-item {
-    align-items: center;
-    text-align: center;
     justify-content: space-between;
 }
 
@@ -193,11 +182,11 @@ footer {
     height: 200px;
 }
 
-#contact-view > section {
-    align-items: center;
-    text-align: center;
-}
-
 footer a {
     font-size: 12pt;
+}
+
+#country-list > section h2 {
+    margin-left: auto;
+    margin-right: auto;
 }

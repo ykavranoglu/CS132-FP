@@ -1,9 +1,13 @@
 /**
- * CS 132
+ * @author A. Yusuf Kavranoglu
+ * CS132 Spring 2024
  * Final Project
- * Author: A. Yusuf Kavranoglu
  * 
- * Summary: The main client side .js file of the project. Handles all client side logic.
+ * Project name: Tea Hunter
+ * Project description: This is an e-commerce website that allows the user to shop for different
+ * kinds of tea based on their country of origin, with a map integration.
+ * 
+ * File description: The main client side .js file of the project. Handles all client side logic.
  * Fetches data from the API to get country and product information.
  * 
  */
@@ -16,6 +20,9 @@
     let cart = {};
     let map = null;
 
+    const MAP_STARTING_POSITION = [70, 40];
+    const MAP_STARTING_ZOOM = 2.3;
+
     /**
      * Creates the map object and assigns it to the module global variable "map"
      * Initializes all event listeners for the buttons that exist at the time of initialization.
@@ -27,8 +34,8 @@
         map = new maplibregl.Map({
             container: 'map', // container id
             style: 'https://api.maptiler.com/maps/basic-v2/style.json?key=s3W8rf4EisIGnZAMsdaB', // style URL
-            center: [50, 40], // starting position [longitude, latitude]
-            zoom: 2.8 // starting zoom
+            center: MAP_STARTING_POSITION, // starting position [longitude, latitude]
+            zoom: MAP_STARTING_ZOOM // starting zoom
         });
 
         // Add event listener to go-back button
@@ -77,6 +84,7 @@
             section.addEventListener('click', (event) => selectCountryView(country, event));
 
             // fetch map info and highlight country on map
+            console.log(country);
             const mapInfo = await fetchMapInfo(country);
             qs("#message-area").classList.add(".hidden");
             highlightCountryOnMap(country, mapInfo.x, mapInfo.y, mapInfo.color);
@@ -629,8 +637,13 @@
         // If the country-view is active, select main-view
         if (! qs("#country-view").classList.contains("hidden")
             || ! qs("#cart-view").classList.contains("hidden")
-            || ! qs("#contact-view").classList.contains("hiddem")){
-
+            || ! qs("#contact-view").classList.contains("hidden")){
+            
+            map.flyTo({
+                center: MAP_STARTING_POSITION,
+                zoom: MAP_STARTING_ZOOM,
+                essential: true
+            });
             selectMainView();
         }
         // If a product view is active when the function is invoked, check which country that
@@ -716,7 +729,7 @@
     }
 
     /**
-     * Senda user message to the server to be stored on the server by doing a POST request.
+     * Send a user message to the server to be stored on the server by doing a POST request.
      */
     async function sendMessage() {
         const msgName = qs("#name-area").value;
@@ -743,21 +756,18 @@
     }
 
     /**
-     * Will be replaced with my own
-     * TAKEN FROM HW3
-     * Displays an error message on the page, hiding any previous results.
-     * If errMsg is passed as a string, the string is used to customize an error message.
-     * Otherwise (the errMsg is an object or missing), a generic message is displayed.
-     * @param {String} errMsg - optional specific error message to display on page.
+     * General error handling function. Has a generic message, or can also accept specific error
+     * messages as arguments and display them.
+     * 
+     * @param {String} errorMessage if this argument is passed, it is displayed instead of the
+     * generic error message.
      */
-    function handleError(errMsg) {
-        if (typeof errMsg === "string") {
-            qs("#message-area").textContent = errMsg;
+    function handleError(errorMessage) {
+        if (typeof errorMessage === "string") {
+            qs("#message-area").textContent = errorMessage;
         } else {
-            // the err object was passed, don"t want to show it on the page;
-            // instead use generic error message.
             qs("#message-area").textContent =
-                "An error ocurred fetching the data. Please try again later.";
+                "An error ocurred. Please try again later or contact the admin.";
         }
         qs("#message-area").classList.remove("hidden");
     }
